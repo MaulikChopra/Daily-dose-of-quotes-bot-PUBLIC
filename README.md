@@ -12,7 +12,7 @@
 
 <ul>
     <li>Python</li>
-    <li>JSON</li>
+    <li>Document Database: MongoDB</li>
     <li>Heroku</li>
     <li>Twitter API</li>
     <li>Git</li>
@@ -23,9 +23,10 @@
 <ul>
     <li>tweepy</li>
     <li>JSON</li>
+    <li>MongoDB API</li>
     <li>PYgithub</li>
     <li>requests</li>
-    <li>fernet encryption</li>
+    <li>loadenv</li>
     <li>multithreading</li>
 </ul>
 
