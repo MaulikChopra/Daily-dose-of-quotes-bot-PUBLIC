@@ -64,19 +64,7 @@ if __name__ == "__main__":
     t2.start()
 
 """
-https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
-Use keywords rather than users to fetch tweets or anything else here.
-Get trending keywords from twitter
-then track one keywords and tweet. will elimiate github
-file managing plus will be in 500k limit
-500k/60/24/31 = 11, 10 tweets in one search therefore
-reply to 10 tweets in 1 keyword every time.
-if reply in every 10 mins:
-    500000÷31÷24÷6 = 112, 10 tweets in one search, therefore
-    reply to 10 people every time.
-    or 
-
-    New approach: 5 tweets max
+New approach: 5 tweets max
     500000÷31÷24÷6/5 = 22 reply in 10 mins
-    500000÷31÷24÷12/5 = 11 reply in 5 mins. **** using
+    500000÷31÷24÷12/5 = 11 reply in 5 mins. **** IN USE ****
 """
