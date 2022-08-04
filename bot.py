@@ -10,14 +10,6 @@ load_dotenv()  # loads the env vairables
 
 
 def authorization():
-    # # decrypt the tokens
-    # try:
-    #     keys = decrypt()
-    # except Exception as e:
-    #     print("decryption failed: ", e)
-    #     return 1
-    # twitter APIv2 is for essential/normal account
-    # This uses client from tweepy
     try:
         dclient = tweepy.Client(
             # OAuth 1.0a
@@ -96,35 +88,6 @@ def __make_tweet_helper_mongodb():
     return quote, newauthor, filteredtags
 
 
-def make_tweet_helper_JSONdatabase():
-
-    def filtered_tags(content, author, tagslist):
-        quotetext = content + " - " + author + "\n" + "Tags:"
-        l = []
-        for tag in tagslist:
-            if tag.count('-') < 2 and len(quotetext+tag) < 280:
-                ftag = tag.replace("-", "").replace(" ", "")
-                quotetext += " #"+ftag
-                l.append(ftag)
-        return l
-
-    with open("database/quotes.json", "r") as file:
-        data = json.load(file)
-
-    index = random.randrange(48391)
-    print("Quote index:", index)
-    quote = data[index]["Quote"]
-    author = data[index]["Author"]
-    newauthor = ""
-    for char in author:
-        if char == ",":
-            break
-        newauthor += char
-    tags = data[index]["Tags"]
-    filteredtags = filtered_tags(quote, newauthor, tags)
-    return quote, newauthor, filteredtags
-
-
 def send_tweet(tweet, client):
     try:
         print("Posting tweet using client")
@@ -162,6 +125,36 @@ def get_latest_tweet(userid, client):
 
 
 """======== DEPRECEATED ======="""
+
+# def make_tweet_helper_JSONdatabase():
+
+#     def filtered_tags(content, author, tagslist):
+#         quotetext = content + " - " + author + "\n" + "Tags:"
+#         l = []
+#         for tag in tagslist:
+#             if tag.count('-') < 2 and len(quotetext+tag) < 280:
+#                 ftag = tag.replace("-", "").replace(" ", "")
+#                 quotetext += " #"+ftag
+#                 l.append(ftag)
+#         return l
+
+#     with open("database/quotes.json", "r") as file:
+#         data = json.load(file)
+
+#     index = random.randrange(48391)
+#     print("Quote index:", index)
+#     quote = data[index]["Quote"]
+#     author = data[index]["Author"]
+#     newauthor = ""
+#     for char in author:
+#         if char == ",":
+#             break
+#         newauthor += char
+#     tags = data[index]["Tags"]
+#     filteredtags = filtered_tags(quote, newauthor, tags)
+#     return quote, newauthor, filteredtags
+
+
 # def make_tweet_helper_getquote():
 
 #     # 50% chance of either directy calling the random method
