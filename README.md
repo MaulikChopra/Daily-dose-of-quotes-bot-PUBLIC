@@ -6,6 +6,11 @@
 
 > ### Tweets inspiring and motivational quotes every 2 hours! Replies to the tweets of specified users as soon they post a new tweet.
 
+[![Twitter link](https://img.shields.io/twitter/follow/bottweetsquotes?style=social)](https://twitter.com/BotTweetsQuotes) 
+![code size](https://img.shields.io/github/languages/code-size/MaulikChopra/Daily-dose-of-quotes-bot-PUBLIC)
+![repo stars](https://img.shields.io/github/stars/maulikchopra/Daily-dose-of-quotes-bot-PUBLIC?style=social)
+
+
 ### Table of contents
 
 [Technologies](#technologies)\
