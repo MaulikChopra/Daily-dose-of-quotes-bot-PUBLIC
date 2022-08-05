@@ -66,13 +66,13 @@ let the no. of users we want to track be: $y$
 
 $$\therefore y = {x * MaxTweetScans \over Days*Hours*Minutes*TweetsPerScan}$$
 
-$y = {500000 * x \over 31*24*60*5}$
+$$y = {500000 * x \over 31*24*60*5}$$
 
-$\rArr y = 2.24x$\
+$$\rArr y = 2.24x$$\
 $\therefore$ Less the time interval, less the no of tracked users & vice versa.
 
 $So$ with 5 min interval, ie: $x = 5$\
-$\rArr y = 2.24*5 \approx 11$\
+$$\rArr y = 2.24*5 \approx 11$$\
 **$\therefore$ Currently tracking 11 users.**
 
 ## Tracked Users
