@@ -64,7 +64,7 @@ bot scans all day with $5$ tweets per scan.\
 let the time interval between each scan be: $x$\
 let the no. of users we want to track be: $y$
 
-$\therefore y = {x * MaxTweetScans \over Days*Hours*Minutes*TweetsPerScan}$
+$$\therefore y = {x * MaxTweetScans \over Days*Hours*Minutes*TweetsPerScan}$$
 
 $y = {500000 * x \over 31*24*60*5}$
 
