@@ -62,9 +62,3 @@ if __name__ == "__main__":
     t2 = threading.Thread(target=main_v2, args=(time_interval_for_tracking,))
     t1.start()
     t2.start()
-
-"""
-New approach: 5 tweets max
-    500000÷31÷24÷6/5 = 22 reply in 10 mins
-    500000÷31÷24÷12/5 = 11 reply in 5 mins. **** IN USE ****
-"""
