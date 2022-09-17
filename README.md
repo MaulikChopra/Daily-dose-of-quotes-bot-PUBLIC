@@ -73,7 +73,7 @@ $$\therefore y = {x * MaxTweets \over Days*Hours*Minutes*TweetsPerScan}$$
 
 $$y = {500000 * x \over 31*24*60*5}$$
 
-$$\rArr y = 2.24x$$
+$$&rarr; y = 2.24x$$
 $\therefore$ Less the time interval, less the no of tracked users & vice versa.
 
 $So$ with 5 minute interval, ie: $x = 5$
