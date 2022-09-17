@@ -77,7 +77,7 @@ $$\rArr y = 2.24x$$
 $\therefore$ Less the time interval, less the no of tracked users & vice versa.
 
 $So$ with 5 minute interval, ie: $x = 5$
-$$\rarr y = 2.24*5 \approx 11$$
+$$&rarr; y = 2.24*5 \approx 11$$
 
 $\therefore$ _Currently tracking **11** users._
 
