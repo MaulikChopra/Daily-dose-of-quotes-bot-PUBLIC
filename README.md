@@ -35,22 +35,31 @@ Daily dose of Quotes is a Twitter bot coded in Python which uses the Twitter API
 
 **Detailed Description**
 
-The Twitter bot is powered by a 50 thousand tweet database hosted on MongoDB Atlas.
-It sends a random number as an Index and extracts the corresponding quote using MongoDB Atlas API. Raw data is formatted to show the author's name, tags, and other information while not exceeding the tweet character limit.
-The Tweet data is then posted to Twitter using the tweepy library and Twitter's API v2 endpoint. 
-This process running on the first thread sleeps for the next 3 hours.
-Simultaneously, the second thread tracks a list of users hosted on the same database and updates the ID of the latest tweet of every user.
-As soon as the user tweets, within 5 minutes, the bot replies to them with a new random quote and updates the ID of the tweet.
+- The Twitter bot is powered by a 50 thousand tweet database hosted on MongoDB Atlas.
+- It sends a random number as an Index and extracts the corresponding quote using MongoDB Atlas API. Raw data is formatted to show the author's name, tags, and other information while not exceeding the tweet character limit.
+- The Tweet data is then posted to Twitter using the tweepy library and Twitter's API v2 endpoint. 
+- This process running on the first thread sleeps for the next 3 hours.
+- Simultaneously, the second thread tracks a list of users hosted on the same database and updates the ID of the latest tweet of every user.
+- As soon as the user tweets, within 5 minutes, the bot replies to them with a new random quote and updates the ID of the tweet.
 
-- The Twitter bot running on Heroku uses a 50 thousand tweets database hosted on MongoDB Atlas to post tweets every 2 hours.
+<!-- - The Twitter bot running on Heroku uses a 50 thousand tweets database hosted on MongoDB Atlas to post tweets every 2 hours.
 - The tweets are cleaned and formatted properly to show the author's name, tags, and other info while not exceeding the tweet character limit.
 - Simultaneously, it tracks the list of users from a MongoDB Atlas database where it also maintains the latest ID of the tweet of the specific user.
 - As soon as the user tweets, within 5 minutes, the bot replies to them with a new random quote. Then, it updates the ID of the tweet for future purposes.
 - All in all, On the first thread, the bot tweets a random quote on its profile every 2 hours and then sleeps.
-- Simultaneously, the second thread checks the tweet ID every 5 minutes and if a new tweet is found, replies to it.
+- Simultaneously, the second thread checks the tweet ID every 5 minutes and if a new tweet is found, replies to it. -->
 
 **My Learnings**
 
+- The project underwent many iterations and setbacks. I started with the 1st version and incrementally upgraded the project to the final version 4.
+- I began with the tweepy library in python to GET and POST data via the Twitter V2 endpoint, which used quotes from a third-party quote API. Eventually, the quote API proved unreliable. 
+- I designed version 2 with a 50-thousand quote database hosted locally, but it had memory problems and frequent crashes due to its sheer size.
+- For version 3, I debugged the solution to host the database on MongoDB Atlas and fetched/updated data through its web API. 
+- I Upgraded the bot to version 4 by implementing user tracking and tweet replying. I had to engineer various logical syntaxes like tracking the optimal number of users without exceeding Twitter's limit, keeping track of tweet IDs to only reply to non-replied or latest tweets, and formatting raw data into a readable Tweet.
+- Also assembled the above processes using python multithreading on Heroku worker dyno and streamlined the project by integrating it with Heroku CLI.
+- Moreover, I studied eclectic Git commands and practices and maintained failsafe versions of production code in branches.
+
+<!-- 
 - Used a database of 50k quotes hosted on MongoDB, and fetched specific quotes from MongoDB Atlas web API using the python requests library.
 - Implemented tweet tracking by storing tweet IDs in MongoDB Database, bot updates the tweet ID every time a targeted user tweets, to which the bot replies.
 - Worked with the Tweepy library to GET and POST data via the Twitter V2 endpoint API.
@@ -63,7 +72,7 @@ As soon as the user tweets, within 5 minutes, the bot replies to them with a new
   - keeping the tokens and private files encrypted
   - develop a CI/CD pipeline for the hassle-free deployment of production code
   - along with maintaining failsafe git versions.
-
+ -->
 ## Images
 
 <img src="images/tweets2.png" width="80%">
