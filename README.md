@@ -4,7 +4,7 @@
 <img src="images/profile-pic.png" width="20%">
 </div>
 
-> ### Tweets inspiring and motivational quotes every 2 hours! Replies to the tweets of specified users as soon they post a new tweet.
+> ### Tweets inspiring and motivational quotes every 3 hours! Replies to the tweets of specified users as soon they post a new tweet.
 
 [![Twitter link](https://img.shields.io/twitter/follow/bottweetsquotes?style=social)](https://twitter.com/BotTweetsQuotes) 
 ![code size](https://img.shields.io/github/languages/code-size/MaulikChopra/Daily-dose-of-quotes-bot-PUBLIC)
@@ -30,10 +30,17 @@
 
 ## Description
 
-A Python-based Twitter bot that uses the Twitter API endpoint to tweet a motivational quote every 2 hours while tracking a list of users to reply to their latest tweet with a random quote.\
+Daily dose of Quotes is a Twitter bot coded in Python which uses the Twitter API endpoint to tweet a motivational quote every 3 hours while tracking a list of users to reply to their latest tweet with a randomly generated quote.\
 **Technology**: Python, MongoDB, Heroku, Git.
 
 **Detailed Description**
+
+The Twitter bot is powered by a 50 thousand tweet database hosted on MongoDB Atlas.
+It sends a random number as an Index and extracts the corresponding quote using MongoDB Atlas API. Raw data is formatted to show the author's name, tags, and other information while not exceeding the tweet character limit.
+The Tweet data is then posted to Twitter using the tweepy library and Twitter's API v2 endpoint. 
+This process running on the first thread sleeps for the next 3 hours.
+Simultaneously, the second thread tracks a list of users hosted on the same database and updates the ID of the latest tweet of every user.
+As soon as the user tweets, within 5 minutes, the bot replies to them with a new random quote and updates the ID of the tweet.
 
 - The Twitter bot running on Heroku uses a 50 thousand tweets database hosted on MongoDB Atlas to post tweets every 2 hours.
 - The tweets are cleaned and formatted properly to show the author's name, tags, and other info while not exceeding the tweet character limit.
